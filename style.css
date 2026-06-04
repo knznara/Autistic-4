@@ -91,7 +91,7 @@ ol {
     box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
-.card sub {
+.subcard {
     background: rgba(255, 255, 255, 0.08);
     margin: 20px 0;
     padding: 20px;
@@ -99,6 +99,12 @@ ol {
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     transition: 0.3s ease;
     border: 1px solid rgba(255,255,255,0.1);
+}
+
+.subcard p {
+    font-size: 14px;
+    opacity: 0.9;
+
 }
 
 .card h2 {
