@@ -171,13 +171,15 @@
               hasil = "jawablah soal terlebi dahulu.";
 }
 
-    document.getElementById("hasil").innerHTML = hasil
+  document.getElementById("hasil").innerHTML = hasil;
+document.getElementById("hasil").style.display = "block";
 }
-
-        function ulangTes(){
-            document.getElementById("quizForm").reset();
-            document.getElementById("hasil").innerHTML = ""
-        }
+     
+    function ulangTes(){
+    document.getElementById("quizForm").reset();
+    document.getElementById("hasil").innerHTML = "";
+    document.getElementById("hasil").style.display = "none";
+}
 
                     </script>
 </div>
