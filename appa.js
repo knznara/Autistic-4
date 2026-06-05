@@ -1,7 +1,4 @@
 
-<div id="hasil"></div>
-
-<script>
 
 function lihatHasil(){
 
@@ -40,4 +37,3 @@ function ulangTes(){
     document.getElementById("hasil").innerHTML = "";
 }
 
-</script>
