@@ -141,46 +141,46 @@
 </form>
 
     <div id="hasil"></div>
+
 <script>
 
-        function lihatHasil(){
-            
-           let jumlahA = 0;
-           let jumlahB = 0;
-           let jumlahC = 0;
-           const jawaban = document.querySelectorAll('input[type="radio"]:checked');
-            
-        jawaban.forEach(item => {     
-          if(item.value === "A") jumlahA++;
-          if(item.value === "B") jumlahB++;
-          if(item.value === "C") jumlahC++;
-});
+function lihatHasil(){
 
-        let hasil = "";
+    let jumlahA = 0;
+    let jumlahB = 0;
+    let jumlahC = 0;
 
-        if(jumlahA > jumlahB && jumlahA > jumlahC){
-              hasil = "Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Visual. Anda lebih mudah memahami informasi melalui gambar, diagram, warna, video, atau catatan yang menarik. Untuk meningkatkan efektivitas belajar, cobalah menggunakan mind map, ilustrasi, dan materi visual lainnya.";
-}
-        else if(jumlahB > jumlahA && jumlahB > jumlahC){
-              hasil = "Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Auditori. Anda lebih mudah memahami informasi melalui mendengarkan, diskusi, penjelasan lisan, atau rekaman suara. Untuk belajar lebih efektif, cobalah mendengarkan penjelasan guru dengan saksama, berdiskusi dengan teman, atau menggunakan audio pembelajaran.";
-}
-        else if(jumlahC > jumlahA && jumlahC > jumlahB){
-              hasil = "Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Kinestetik. Anda lebih mudah memahami informasi melalui praktik langsung, aktivitas fisik, dan pengalaman nyata. Untuk meningkatkan efektivitas belajar, cobalah melakukan percobaan, simulasi, atau belajar sambil mempraktikkan materi yang dipelajari.";
-}
-        else{
-              hasil = "jawablah soal terlebi dahulu.";
+    const jawaban = document.querySelectorAll('input[type="radio"]:checked');
+
+    jawaban.forEach(item => {
+        if(item.value === "A") jumlahA++;
+        if(item.value === "B") jumlahB++;
+        if(item.value === "C") jumlahC++;
+    });
+
+    let hasil = "";
+
+    if(jumlahA > jumlahB && jumlahA > jumlahC){
+        hasil = "Hasil Anda: A";
+    }
+    else if(jumlahB > jumlahA && jumlahB > jumlahC){
+        hasil = "Hasil Anda: B";
+    }
+    else if(jumlahC > jumlahA && jumlahC > jumlahB){
+        hasil = "Hasil Anda: C";
+    }
+    else{
+        hasil = "Hasil tidak dapat ditentukan karena jumlah pilihan sama.";
+    }
+
+    document.getElementById("hasil").innerHTML = hasil;
 }
 
-            
-  document.getElementById("hasil").innerHTML = hasil;
-document.getElementById("hasil").style.display = "block";
-}
-     
-    function ulangTes(){
+function ulangTes(){
     document.getElementById("quizForm").reset();
     document.getElementById("hasil").innerHTML = "";
-    document.getElementById("hasil").style.display = "none";
 }
+
 
                     </script>
  
