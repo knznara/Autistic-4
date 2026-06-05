@@ -1,0 +1,193 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tes Gaya Belajar</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+#hasil{
+    margin-top:20px;
+    padding:20px;
+    border:2px solid #38bdf8;
+    border-radius:12px;
+    background:#1e293b;
+    display:none;
+    line-height:1.7;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Tes Gaya Belajar</h1>
+
+<form id="quizForm">
+
+<div class="card">
+<h3>1. Saat guru menjelaskan materi, kamu lebih mudah memahami jika...</h3>
+
+<label>
+<input type="radio" name="q1" value="A">
+A. Ada gambar, diagram, atau video
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="B">
+B. Dijelaskan secara lisan
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="C">
+C. Ada praktik atau demonstrasi langsung
+</label>
+
+</div>
+
+<div class="card">
+<h3>2. Ketika menghafal pelajaran, kamu biasanya...</h3>
+
+<label>
+<input type="radio" name="q2" value="A">
+A. Membaca catatan berulang kali
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="B">
+B. Mengucapkannya keras-keras
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="C">
+C. Mempraktikkannya langsung
+</label>
+
+</div>
+
+<div class="card">
+<h3>3. Saat belajar hal baru, kamu lebih suka...</h3>
+
+<label>
+<input type="radio" name="q3" value="A">
+A. Melihat contoh gambar
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="B">
+B. Mendengarkan penjelasan
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="C">
+C. Mencobanya sendiri
+</label>
+
+</div>
+
+<button type="button" onclick="lihatHasil()">
+Lihat Hasil
+</button>
+
+<button type="button" onclick="ulangTes()">
+Ulangi Tes
+</button>
+
+</form>
+
+<div id="hasil"></div>
+
+<script>
+
+function lihatHasil(){
+
+let jumlahA = 0;
+let jumlahB = 0;
+let jumlahC = 0;
+
+const jawaban =
+document.querySelectorAll('input[type="radio"]:checked');
+
+jawaban.forEach(item => {
+
+if(item.value === "A") jumlahA++;
+if(item.value === "B") jumlahB++;
+if(item.value === "C") jumlahC++;
+
+});
+
+let hasil = "";
+
+if(jumlahA > jumlahB && jumlahA > jumlahC){
+
+hasil =
+"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Visual. Anda lebih mudah memahami informasi melalui gambar, diagram, warna, video, atau catatan yang menarik.";
+
+}
+
+else if(jumlahB > jumlahA && jumlahB > jumlahC){
+
+hasil =
+"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Auditori. Anda lebih mudah memahami informasi melalui mendengarkan, diskusi, penjelasan lisan, atau rekaman suara.";
+
+}
+
+else if(jumlahC > jumlahA && jumlahC > jumlahB){
+
+hasil =
+"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Kinestetik. Anda lebih mudah memahami informasi melalui praktik langsung, aktivitas fisik, dan pengalaman nyata.";
+
+}
+
+else{
+
+hasil =
+"Hasil tidak dapat ditentukan karena jumlah jawaban sama.";
+
+}
+
+document.getElementById("hasil").innerHTML = hasil;
+document.getElementById("hasil").style.display = "block";
+
+}
+
+function ulangTes(){
+
+document.getElementById("quizForm").reset();
+
+document.getElementById("hasil").innerHTML = "";
+
+document.getElementById("hasil").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
+```
