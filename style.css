@@ -130,15 +130,3 @@ footer {
     font-size: 14px;
     opacity: 0.8;
 }
-
-.hasil{
-    margin-top:20px;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #ddd;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    background:white;
-    font-size:18px;
-    line-height:1.8;
-    display:none;
-}
