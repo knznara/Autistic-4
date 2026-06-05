@@ -122,6 +122,16 @@ subcard h3 {
     opacity: 0.9;
 }
 
+#hasil{
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f4fff4;
+    font-size: 18px;
+    line-height: 1.6;
+    display: none;
+    
 /* FOOTER */
 footer {
     text-align: center;
