@@ -18,10 +18,19 @@ body{
 }
 
 .card{
-    background:#1e293b;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:12px;
+      background: rgba(255, 255, 255, 0.08);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+    
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
 button{
@@ -109,6 +118,251 @@ C. Mencobanya sendiri
 </label>
 
 </div>
+
+    
+```html
+<div class="card">
+<h3>4. Ketika belajar sendiri, kamu paling sering...</h3>
+
+<label>
+<input type="radio" name="q4" value="A">
+A. Membuat rangkuman atau mind map
+</label><br>
+
+<label>
+<input type="radio" name="q4" value="B">
+B. Membaca dengan suara keras
+</label><br>
+
+<label>
+<input type="radio" name="q4" value="C">
+C. Praktik atau menggunakan benda sebagai alat bantu
+</label>
+
+</div>
+
+<div class="card">
+<h3>5. Saat mengingat suatu kejadian, yang paling kamu ingat adalah...</h3>
+
+<label>
+<input type="radio" name="q5" value="A">
+A. Apa yang kamu lihat
+</label><br>
+
+<label>
+<input type="radio" name="q5" value="B">
+B. Apa yang kamu dengar
+</label><br>
+
+<label>
+<input type="radio" name="q5" value="C">
+C. Apa yang kamu lakukan
+</label>
+
+</div>
+
+<div class="card">
+<h3>6. Kamu lebih suka tugas yang...</h3>
+
+<label>
+<input type="radio" name="q6" value="A">
+A. Membuat poster atau presentasi visual
+</label><br>
+
+<label>
+<input type="radio" name="q6" value="B">
+B. Presentasi lisan atau diskusi
+</label><br>
+
+<label>
+<input type="radio" name="q6" value="C">
+C. Praktikum atau proyek
+</label>
+
+</div>
+
+<div class="card">
+<h3>7. Saat membaca buku, kamu biasanya...</h3>
+
+<label>
+<input type="radio" name="q7" value="A">
+A. Memperhatikan gambar dan warna
+</label><br>
+
+<label>
+<input type="radio" name="q7" value="B">
+B. Membaca sambil mengucapkan kata-katanya
+</label><br>
+
+<label>
+<input type="radio" name="q7" value="C">
+C. Sulit duduk diam terlalu lama
+</label>
+
+</div>
+
+<div class="card">
+<h3>8. Ketika belajar materi sulit, kamu lebih memilih...</h3>
+
+<label>
+<input type="radio" name="q8" value="A">
+A. Menonton video pembelajaran
+</label><br>
+
+<label>
+<input type="radio" name="q8" value="B">
+B. Mendengarkan penjelasan guru atau teman
+</label><br>
+
+<label>
+<input type="radio" name="q8" value="C">
+C. Mencoba latihan langsung
+</label>
+
+</div>
+
+<div class="card">
+<h3>9. Saat di kelas, kamu paling sering...</h3>
+
+<label>
+<input type="radio" name="q9" value="A">
+A. Mencatat dan memperhatikan papan tulis
+</label><br>
+
+<label>
+<input type="radio" name="q9" value="B">
+B. Fokus mendengarkan penjelasan
+</label><br>
+
+<label>
+<input type="radio" name="q9" value="C">
+C. Aktif melakukan kegiatan praktik
+</label>
+
+</div>
+
+<div class="card">
+<h3>10. Kamu lebih mudah mengingat...</h3>
+
+<label>
+<input type="radio" name="q10" value="A">
+A. Wajah seseorang
+</label><br>
+
+<label>
+<input type="radio" name="q10" value="B">
+B. Suara seseorang
+</label><br>
+
+<label>
+<input type="radio" name="q10" value="C">
+C. Pengalaman bersama seseorang
+</label>
+
+</div>
+
+<div class="card">
+<h3>11. Saat belajar, kamu merasa paling nyaman...</h3>
+
+<label>
+<input type="radio" name="q11" value="A">
+A. Dengan catatan berwarna
+</label><br>
+
+<label>
+<input type="radio" name="q11" value="B">
+B. Dengan suasana yang tenang untuk mendengar
+</label><br>
+
+<label>
+<input type="radio" name="q11" value="C">
+C. Sambil bergerak atau praktik
+</label>
+
+</div>
+
+<div class="card">
+<h3>12. Jika membeli barang baru, kamu lebih suka...</h3>
+
+<label>
+<input type="radio" name="q12" value="A">
+A. Membaca petunjuk dan melihat gambar
+</label><br>
+
+<label>
+<input type="radio" name="q12" value="B">
+B. Mendengarkan penjelasan orang lain
+</label><br>
+
+<label>
+<input type="radio" name="q12" value="C">
+C. Langsung mencoba menggunakannya
+</label>
+
+</div>
+
+<div class="card">
+<h3>13. Saat mengerjakan tugas kelompok, kamu lebih suka...</h3>
+
+<label>
+<input type="radio" name="q13" value="A">
+A. Membuat desain atau visual
+</label><br>
+
+<label>
+<input type="radio" name="q13" value="B">
+B. Menjadi pembicara
+</label><br>
+
+<label>
+<input type="radio" name="q13" value="C">
+C. Menyiapkan dan menjalankan kegiatan
+</label>
+
+</div>
+
+<div class="card">
+<h3>14. Ketika belajar untuk ujian, kamu biasanya...</h3>
+
+<label>
+<input type="radio" name="q14" value="A">
+A. Membaca ulang dan memberi tanda warna
+</label><br>
+
+<label>
+<input type="radio" name="q14" value="B">
+B. Berdiskusi dengan teman
+</label><br>
+
+<label>
+<input type="radio" name="q14" value="C">
+C. Mengerjakan banyak latihan soal
+</label>
+
+</div>
+
+<div class="card">
+<h3>15. Menurutmu, cara belajar yang paling menyenangkan adalah...</h3>
+
+<label>
+<input type="radio" name="q15" value="A">
+A. Melihat gambar, video, atau infografis
+</label><br>
+
+<label>
+<input type="radio" name="q15" value="B">
+B. Mendengarkan dan berdiskusi
+</label><br>
+
+<label>
+<input type="radio" name="q15" value="C">
+C. Praktik dan mencoba langsung
+</label>
+
+</div>
+```
+
+
 
 <button type="button" onclick="lihatHasil()">
 Lihat Hasil
