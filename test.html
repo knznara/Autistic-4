@@ -1,378 +1,418 @@
-
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Autistic-4</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tes Gaya Belajar</title>
 
-<header>
-    <h1>Autistic-4</h1>
-    <p>Welcome to Our Super Team 🚀</p>
-</header>
-    
-<nav>
-    <a href="index.html">Home</a>
-    <a href="Team.html">Team</a>
-    <a href="Design.html">design</a>
-    <a href="test.html">Project</a>
-</nav>
-    
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-  font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0b1f3a, #1f3c88);
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.card{
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b1f3a, #1f3c88);
+    color: white;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 45px;
+    color: #00c3ff;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* CONTENT */
+.content {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
     background: rgba(255, 255, 255, 0.08);
     margin: 20px 0;
     padding: 20px;
     border-radius: 20px;
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
     border: 1px solid rgba(255,255,255,0.1);
 }
-    
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+
+.card h2 {
+    color: #00c3ff;
+    margin-bottom: 15px;
 }
 
+.card label{
+    display:block;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+/* BUTTON */
 button{
-    padding:10px 20px;
+    background:#00c3ff;
+    color:#0b1f3a;
     border:none;
-    border-radius:8px;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
     cursor:pointer;
     margin-right:10px;
+    margin-top:10px;
 }
 
+button:hover{
+    opacity:0.9;
+}
+
+/* HASIL */
 #hasil{
-    margin-top:20px;
-    padding:20px;
-    border:2px solid #38bdf8;
-    border-radius:12px;
-    background:#1e293b;
     display:none;
-    line-height:1.7;
+    margin-top:25px;
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+#hasil h2{
+    color:#00c3ff;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.4);
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 </style>
 </head>
 <body>
 
-<h1>Tes Gaya Belajar</h1>
+<header>
+    <h1>Tes Gaya Belajar</h1>
+    <p>Kenali gaya belajar yang paling sesuai dengan dirimu</p>
+</header>
+
+<div class="content">
 
 <form id="quizForm">
 
 <div class="card">
-<h3>1. Saat guru menjelaskan materi, kamu lebih mudah memahami jika...</h3>
+<h2>1. Saat belajar, kamu lebih suka...</h2>
 
 <label>
 <input type="radio" name="q1" value="A">
-A. Ada gambar, diagram, atau video
-</label><br>
+Melihat gambar, diagram, atau video
+</label>
 
 <label>
 <input type="radio" name="q1" value="B">
-B. Dijelaskan secara lisan
-</label><br>
+Mendengarkan penjelasan
+</label>
 
 <label>
 <input type="radio" name="q1" value="C">
-C. Ada praktik atau demonstrasi langsung
+Mencoba atau mempraktikkan langsung
 </label>
-
 </div>
 
 <div class="card">
-<h3>2. Ketika menghafal pelajaran, kamu biasanya...</h3>
+<h2>2. Saat menghafal pelajaran, kamu biasanya...</h2>
 
 <label>
 <input type="radio" name="q2" value="A">
-A. Membaca catatan berulang kali
-</label><br>
+Membaca catatan berulang kali
+</label>
 
 <label>
 <input type="radio" name="q2" value="B">
-B. Mengucapkannya keras-keras
-</label><br>
+Mengucapkannya dengan suara keras
+</label>
 
 <label>
 <input type="radio" name="q2" value="C">
-C. Mempraktikkannya langsung
+Belajar sambil bergerak atau praktik
 </label>
-
 </div>
 
 <div class="card">
-<h3>3. Saat belajar hal baru, kamu lebih suka...</h3>
+<h2>3. Ketika guru menjelaskan materi baru...</h2>
 
 <label>
 <input type="radio" name="q3" value="A">
-A. Melihat contoh gambar
-</label><br>
+Saya lebih suka melihat contoh visual
+</label>
 
 <label>
 <input type="radio" name="q3" value="B">
-B. Mendengarkan penjelasan
-</label><br>
+Saya lebih suka mendengarkan penjelasan
+</label>
 
 <label>
 <input type="radio" name="q3" value="C">
-C. Mencobanya sendiri
+Saya lebih suka mencoba sendiri
 </label>
-
 </div>
 
-
 <div class="card">
-<h3>4. Ketika belajar sendiri, kamu paling sering...</h3>
+<h2>4. Saat mengingat pelajaran, kamu lebih mudah...</h2>
 
 <label>
 <input type="radio" name="q4" value="A">
-A. Membuat rangkuman atau mind map
-</label><br>
+Mengingat gambar atau tulisan
+</label>
 
 <label>
 <input type="radio" name="q4" value="B">
-B. Membaca dengan suara keras
-</label><br>
+Mengingat apa yang didengar
+</label>
 
 <label>
 <input type="radio" name="q4" value="C">
-C. Praktik atau menggunakan benda sebagai alat bantu
+Mengingat pengalaman yang dilakukan
 </label>
-
 </div>
 
 <div class="card">
-<h3>5. Saat mengingat suatu kejadian, yang paling kamu ingat adalah...</h3>
+<h2>5. Ketika membaca buku, kamu lebih suka...</h2>
 
 <label>
 <input type="radio" name="q5" value="A">
-A. Apa yang kamu lihat
-</label><br>
+Buku yang banyak gambar dan ilustrasi
+</label>
 
 <label>
 <input type="radio" name="q5" value="B">
-B. Apa yang kamu dengar
-</label><br>
+Mendengarkan penjelasan isi buku
+</label>
 
 <label>
 <input type="radio" name="q5" value="C">
-C. Apa yang kamu lakukan
+Mencoba langsung apa yang dipelajari
 </label>
-
 </div>
 
 <div class="card">
-<h3>6. Kamu lebih suka tugas yang...</h3>
+<h2>6. Saat belajar materi baru, kamu lebih suka...</h2>
 
 <label>
 <input type="radio" name="q6" value="A">
-A. Membuat poster atau presentasi visual
-</label><br>
+Melihat contoh atau diagram
+</label>
 
 <label>
 <input type="radio" name="q6" value="B">
-B. Presentasi lisan atau diskusi
-</label><br>
+Mendengarkan penjelasan guru
+</label>
 
 <label>
 <input type="radio" name="q6" value="C">
-C. Praktikum atau proyek
+Mempraktikkan secara langsung
 </label>
-
 </div>
 
 <div class="card">
-<h3>7. Saat membaca buku, kamu biasanya...</h3>
+<h2>7. Jika diberi petunjuk arah, kamu lebih mudah memahami dengan...</h2>
 
 <label>
 <input type="radio" name="q7" value="A">
-A. Memperhatikan gambar dan warna
-</label><br>
+Melihat peta
+</label>
 
 <label>
 <input type="radio" name="q7" value="B">
-B. Membaca sambil mengucapkan kata-katanya
-</label><br>
+Mendengar penjelasan
+</label>
 
 <label>
 <input type="radio" name="q7" value="C">
-C. Sulit duduk diam terlalu lama
+Mencoba rute tersebut langsung
 </label>
-
 </div>
 
 <div class="card">
-<h3>8. Ketika belajar materi sulit, kamu lebih memilih...</h3>
+<h2>8. Saat mengerjakan tugas kelompok, kamu biasanya...</h2>
 
 <label>
 <input type="radio" name="q8" value="A">
-A. Menonton video pembelajaran
-</label><br>
+Membuat catatan atau desain
+</label>
 
 <label>
 <input type="radio" name="q8" value="B">
-B. Mendengarkan penjelasan guru atau teman
-</label><br>
+Menjelaskan ide kepada teman
+</label>
 
 <label>
 <input type="radio" name="q8" value="C">
-C. Mencoba latihan langsung
+Mengerjakan bagian praktik
 </label>
-
 </div>
 
 <div class="card">
-<h3>9. Saat di kelas, kamu paling sering...</h3>
+<h2>9. Saat mengikuti pelajaran, kamu lebih fokus jika...</h2>
 
 <label>
 <input type="radio" name="q9" value="A">
-A. Mencatat dan memperhatikan papan tulis
-</label><br>
+Ada gambar atau media visual
+</label>
 
 <label>
 <input type="radio" name="q9" value="B">
-B. Fokus mendengarkan penjelasan
-</label><br>
+Guru menjelaskan dengan jelas
+</label>
 
 <label>
 <input type="radio" name="q9" value="C">
-C. Aktif melakukan kegiatan praktik
+Ada aktivitas praktik
 </label>
-
 </div>
 
 <div class="card">
-<h3>10. Kamu lebih mudah mengingat...</h3>
+<h2>10. Ketika menghafal sesuatu, kamu biasanya...</h2>
 
 <label>
 <input type="radio" name="q10" value="A">
-A. Wajah seseorang
-</label><br>
+Membaca berulang kali
+</label>
 
 <label>
 <input type="radio" name="q10" value="B">
-B. Suara seseorang
-</label><br>
+Mengucapkannya keras-keras
+</label>
 
 <label>
 <input type="radio" name="q10" value="C">
-C. Pengalaman bersama seseorang
+Mempraktikkan atau menuliskannya
 </label>
-
 </div>
 
 <div class="card">
-<h3>11. Saat belajar, kamu merasa paling nyaman...</h3>
+<h2>11. Saat belajar di rumah, kamu lebih suka...</h2>
 
 <label>
 <input type="radio" name="q11" value="A">
-A. Dengan catatan berwarna
-</label><br>
+Membaca buku atau rangkuman
+</label>
 
 <label>
 <input type="radio" name="q11" value="B">
-B. Dengan suasana yang tenang untuk mendengar
-</label><br>
+Menonton atau mendengarkan penjelasan
+</label>
 
 <label>
 <input type="radio" name="q11" value="C">
-C. Sambil bergerak atau praktik
+Belajar sambil melakukan aktivitas
 </label>
-
 </div>
 
 <div class="card">
-<h3>12. Jika membeli barang baru, kamu lebih suka...</h3>
+<h2>12. Presentasi yang paling menarik menurutmu adalah...</h2>
 
 <label>
 <input type="radio" name="q12" value="A">
-A. Membaca petunjuk dan melihat gambar
-</label><br>
+Banyak gambar dan animasi
+</label>
 
 <label>
 <input type="radio" name="q12" value="B">
-B. Mendengarkan penjelasan orang lain
-</label><br>
+Pembicaranya menjelaskan dengan baik
+</label>
 
 <label>
 <input type="radio" name="q12" value="C">
-C. Langsung mencoba menggunakannya
+Ada demonstrasi langsung
 </label>
-
 </div>
 
 <div class="card">
-<h3>13. Saat mengerjakan tugas kelompok, kamu lebih suka...</h3>
+<h2>13. Saat belajar keterampilan baru, kamu lebih suka...</h2>
 
 <label>
 <input type="radio" name="q13" value="A">
-A. Membuat desain atau visual
-</label><br>
+Melihat contoh terlebih dahulu
+</label>
 
 <label>
 <input type="radio" name="q13" value="B">
-B. Menjadi pembicara
-</label><br>
+Mendengarkan instruksi
+</label>
 
 <label>
 <input type="radio" name="q13" value="C">
-C. Menyiapkan dan menjalankan kegiatan
+Langsung mencoba
 </label>
-
 </div>
 
 <div class="card">
-<h3>14. Ketika belajar untuk ujian, kamu biasanya...</h3>
+<h2>14. Yang paling membantu saat belajar adalah...</h2>
 
 <label>
 <input type="radio" name="q14" value="A">
-A. Membaca ulang dan memberi tanda warna
-</label><br>
+Diagram dan warna
+</label>
 
 <label>
 <input type="radio" name="q14" value="B">
-B. Berdiskusi dengan teman
-</label><br>
+Diskusi dan penjelasan
+</label>
 
 <label>
 <input type="radio" name="q14" value="C">
-C. Mengerjakan banyak latihan soal
+Praktik langsung
 </label>
-
 </div>
 
 <div class="card">
-<h3>15. Menurutmu, cara belajar yang paling menyenangkan adalah...</h3>
+<h2>15. Cara belajar yang paling kamu sukai adalah...</h2>
 
 <label>
 <input type="radio" name="q15" value="A">
-A. Melihat gambar, video, atau infografis
-</label><br>
+Membaca dan melihat
+</label>
 
 <label>
 <input type="radio" name="q15" value="B">
-B. Mendengarkan dan berdiskusi
-</label><br>
+Mendengarkan dan berdiskusi
+</label>
 
 <label>
 <input type="radio" name="q15" value="C">
-C. Praktik dan mencoba langsung
+Melakukan dan mempraktikkan
 </label>
-
 </div>
-
-
-
 
 <button type="button" onclick="lihatHasil()">
 Lihat Hasil
@@ -386,6 +426,12 @@ Ulangi Tes
 
 <div id="hasil"></div>
 
+</div>
+
+<footer>
+    © 2025 Tes Gaya Belajar
+</footer>
+
 <script>
 
 function lihatHasil(){
@@ -394,8 +440,7 @@ let jumlahA = 0;
 let jumlahB = 0;
 let jumlahC = 0;
 
-const jawaban =
-document.querySelectorAll('input[type="radio"]:checked');
+const jawaban = document.querySelectorAll('input[type="radio"]:checked');
 
 jawaban.forEach(item => {
 
@@ -409,29 +454,37 @@ let hasil = "";
 
 if(jumlahA > jumlahB && jumlahA > jumlahC){
 
-hasil =
-"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Visual. Anda lebih mudah memahami informasi melalui gambar, diagram, warna, video, atau catatan yang menarik.";
+hasil = `
+<h2>Gaya Belajar Visual</h2>
+<p>Anda lebih mudah memahami informasi melalui gambar, diagram, warna, video, dan catatan yang menarik.</p>
+`;
 
 }
 
 else if(jumlahB > jumlahA && jumlahB > jumlahC){
 
-hasil =
-"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Auditori. Anda lebih mudah memahami informasi melalui mendengarkan, diskusi, penjelasan lisan, atau rekaman suara.";
+hasil = `
+<h2>Gaya Belajar Auditori</h2>
+<p>Anda lebih mudah memahami informasi melalui mendengarkan, diskusi, dan penjelasan secara lisan.</p>
+`;
 
 }
 
 else if(jumlahC > jumlahA && jumlahC > jumlahB){
 
-hasil =
-"Hasil tes menunjukkan bahwa Anda memiliki kecenderungan gaya belajar Kinestetik. Anda lebih mudah memahami informasi melalui praktik langsung, aktivitas fisik, dan pengalaman nyata.";
+hasil = `
+<h2>Gaya Belajar Kinestetik</h2>
+<p>Anda lebih mudah memahami informasi melalui praktik langsung, pengalaman nyata, dan aktivitas fisik.</p>
+`;
 
 }
 
 else{
 
-hasil =
-"Hasil tidak dapat ditentukan karena jumlah jawaban sama.";
+hasil = `
+<h2>Hasil Tidak Dapat Ditentukan</h2>
+<p>Jumlah jawaban yang dipilih sama. Cobalah menjawab lebih banyak pertanyaan.</p>
+`;
 
 }
 
@@ -443,10 +496,8 @@ document.getElementById("hasil").style.display = "block";
 function ulangTes(){
 
 document.getElementById("quizForm").reset();
-
-document.getElementById("hasil").innerHTML = "";
-
 document.getElementById("hasil").style.display = "none";
+document.getElementById("hasil").innerHTML = "";
 
 }
 
